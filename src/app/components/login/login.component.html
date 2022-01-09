@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="container d-flex vh-100 align-items-center justify-content-center">
+    <div class="row">
+        <form class="row" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline">
+                <mat-label>Documento de identidad</mat-label>
+                <input matInput type="text" formControlName="idDocument" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <input matInput type="password" placeholder="Contraseña" formControlName="password" required>
+            </mat-form-field>
+            <div>
+                <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid ">Ingresar</button>
+            </div>
+        </form>
+    </div>
+</div>
