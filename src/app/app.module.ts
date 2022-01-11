@@ -14,8 +14,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatList, MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { AccountsComponent } from './components/accounts/accounts.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,10 @@ import { AccountsComponent } from './components/accounts/accounts.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,
@@ -41,8 +44,10 @@ import { AccountsComponent } from './components/accounts/accounts.component';
   ],
   exports: [
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,
